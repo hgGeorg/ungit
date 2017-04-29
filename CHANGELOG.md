@@ -3,9 +3,23 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 Use the following format for additions: ` - VERSION: [feature/patch (if applicable)] Short description of change. Links to relevant issues/PRs.`
 
+- 1.1.15: Updating crash page with instructions and adblock detection
+- 1.1.14: Disable strict mode for startup params and config [#890](https://github.com/FredrikNoren/ungit/issues/890)
+- 1.1.13: Fix startup args bug: [#896](https://github.com/FredrikNoren/ungit/issues/896)
+- 1.1.12:
+  - Retain commit messages when commit fails [#882](https://github.com/FredrikNoren/ungit/pull/882)
+  - Fix rare edge case where remote node is gone during reset op.
+  - rescursively resolve all promises before caching them. [#878](https://github.com/FredrikNoren/ungit/pull/878)
+- 1.1.11:
+    - Fix cli arguments [#871](https://github.com/FredrikNoren/ungit/pull/871)
+    - Stop if ~/.ungitrc contains syntax error
+    - Removed official support ini format of ~/.ungitrc, because internal API supports only JSON
+- 1.1.10: Fix broken diff out in some cases when diff contains table. [#881](https://github.com/FredrikNoren/ungit/pull/881)
+- 1.1.9: Fix around ubuntu's inability to cache promises. [#877](https://github.com/FredrikNoren/ungit/pull/878)
 - 1.1.8:
     - Realtime text diff via invalidate diff on directory change [#867](https://github.com/FredrikNoren/ungit/pull/867)
     - Promisify `./source/utils/cache.js` [#870](https://github.com/FredrikNoren/ungit/pull/870)
+    - Fix load more text diff button. [#876](https://github.com/FredrikNoren/ungit/pull/876)
 - 1.1.7:
     - Fix diff flickering issue and optimization [#865](https://github.com/FredrikNoren/ungit/pull/865)
     - Fix credential dialog issue [#864](https://github.com/FredrikNoren/ungit/pull/864)

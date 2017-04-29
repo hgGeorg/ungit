@@ -44,7 +44,7 @@ This will launch the server and open up a browser with the ui.
 
 Configuring
 ---------
-Put a configuration file called .ungitrc in your home directory (`/home/USERNAME` on \*nix, `C:/Users/USERNAME/` on windows). Can be in either json or ini format. See [source/config.js](source/config.js) for available options.
+Put a configuration file called .ungitrc in your home directory (`/home/USERNAME` on \*nix, `C:/Users/USERNAME/` on windows). Configuration file must be in json format. See [source/config.js](source/config.js) for available options.
 
 You can also override configuration variables at launch by specifying them as command line arguments; `ungit --port=8080`. To disable boolean features use --no: `ungit --no-autoFetch`.
 
@@ -56,8 +56,6 @@ Example of `~/.ungitrc` configuration file to change default port and enable bug
 	"bugtracking": true
 }
 ```
-
-Ungit uses [rc](https://github.com/dominictarr/rc) for configuration, which in turn uses [yargs](https://github.com/yargs/yargs) for command line arguments. See corresponding documentations for more details.
 
 External Merge Tools
 --------------------
@@ -101,6 +99,7 @@ Known issues
 * If you're running MacOSX Mavericks and Ungit crashes after a few seconds; try updating npm and node. See [#259](https://github.com/FredrikNoren/ungit/issues/259) and [#249](https://github.com/FredrikNoren/ungit/issues/249) for details.
 * Ubuntu users may have trouble installing because the node executable is named differently on Ubuntu, see [#401](https://github.com/FredrikNoren/ungit/issues/401) for details.
 * Debian Wheezy's supported git and nodejs packages are too old, therefore download newest [git](https://github.com/git/git/releases) and [nodejs](https://nodejs.org/download/) tarballs and [build from source](http://www.control-escape.com/linux/lx-swinstall-tar.html).
+* Adblocker may block Ungit! Some ad blockers, such as [Adblock plus](https://adblockplus.org) and [uBlock](https://www.ublock.org/), don't like localhost api calls and assume that it is a cross domain attack.  Please whitelist `{localhost|127.0.0.1|$UngitURL}:{ungit port number}`. [#887](https://github.com/FredrikNoren/ungit/issues/887) [#892](https://github.com/FredrikNoren/ungit/issues/892)
 
 Changelog
 ---------
